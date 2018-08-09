@@ -7,6 +7,11 @@ public class Application {
     private static final Logger logger = LogManager.getLogger(Application.class);
 
     public static void main(String[] args) {
-        logger.info("Hello, World!");
+        System.out.println("Enter text: ");
+        EventSource eventSource = new EventSource();
+
+        eventSource.addObserver((observable, o) -> System.out.println("Received response: " + o));
+
+        new Thread(eventSource).start();
     }
 }
