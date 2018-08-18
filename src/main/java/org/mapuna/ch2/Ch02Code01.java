@@ -1,4 +1,4 @@
-package org.mapuna.ch1;
+package org.mapuna.ch2;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
@@ -6,7 +6,7 @@ import io.reactivex.functions.Consumer;
 import java.util.Arrays;
 import java.util.List;
 
-public class Ch01Code01 {
+public class Ch02Code01 {
     private static List<String> SUPER_HEROES = Arrays.asList(
             "Superman",
             "Batman",
