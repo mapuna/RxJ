@@ -1,9 +1,8 @@
-package org.mapuna;
+package org.mapuna.random;
 
 import io.reactivex.Maybe;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;

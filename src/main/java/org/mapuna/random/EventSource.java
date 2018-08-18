@@ -1,4 +1,4 @@
-package org.mapuna;
+package org.mapuna.random;
 
 import java.util.Observable;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package org.mapuna;
+package org.mapuna.random;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
