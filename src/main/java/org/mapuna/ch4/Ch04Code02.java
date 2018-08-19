@@ -10,7 +10,7 @@ import io.reactivex.Single;
  * Typically, doOnNext and doOnComplete are replaced by doOnSuccess that accept
  * the produced item.
  */
-public class Ch04Code01 {
+public class Ch04Code02 {
     public static void main(String[] args) {
         Single.just("Thanos")
                 .doOnSuccess(s -> System.out.println("Hello, " + s + "!"))

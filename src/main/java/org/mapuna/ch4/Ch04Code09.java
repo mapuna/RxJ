@@ -1,8 +1,8 @@
 package org.mapuna.ch4;
 
 import io.reactivex.Observable;
-
-import static org.mapuna.ch3.HotStream.takeANap;
+import io.reactivex.schedulers.Schedulers;
+import org.mapuna.ch3.HotStream;
 
 /**
  * So far, we have seen examples of streams that were pushing items to subscribers.
@@ -16,15 +16,20 @@ import static org.mapuna.ch3.HotStream.takeANap;
  * We create a stream of integers and display them in the subscribe method after
  * a small nap.
  */
-public class Ch04Code08 {
+public class Ch04Code09 {
     public static void main(String[] args) {
-        Observable.range(1, 10000).map(Item::new)
+        Observable.range(1, 999_999_999).map(Item::new)
+                // Emissions are made on the caller thread (main)
+                // The next processing stages and the terminal subscriber
+                // is now called on a separate thread (io thread).
+                .observeOn(Schedulers.io())
                 .subscribe(
                         item -> {
                             nap();
                             System.out.println("Received: " + item.i);
                         }
                 );
+        HotStream.takeANap(5);
     }
 
     private static void nap() {

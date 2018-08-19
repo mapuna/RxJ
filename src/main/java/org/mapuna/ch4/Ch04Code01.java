@@ -12,8 +12,14 @@ import io.reactivex.Single;
  */
 public class Ch04Code01 {
     public static void main(String[] args) {
-        Single.just("Thanos")
-                .doOnSuccess(s -> System.out.println("Hello, " + s + "!"))
-                .subscribe();
+        Single.just("Thanos").subscribe(
+                (s, err) -> {
+                    if (err == null) {
+                        System.out.println("Hello, " + s + "!");
+                    } else {
+                        err.printStackTrace();
+                    }
+                }
+        );
     }
 }
