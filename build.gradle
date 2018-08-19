@@ -20,6 +20,18 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
     // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava
     compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.0'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-core
+    compile group: 'io.vertx', name: 'vertx-core', version: '3.5.3'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-web
+    compile group: 'io.vertx', name: 'vertx-web', version: '3.5.3'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-web-client
+    compile group: 'io.vertx', name: 'vertx-web-client', version: '3.5.3'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-rx-java2
+    compile group: 'io.vertx', name: 'vertx-rx-java2', version: '3.5.3'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-unit
+    testCompile group: 'io.vertx', name: 'vertx-unit', version: '3.5.3'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
 }
 
 jar {
