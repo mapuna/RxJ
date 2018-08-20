@@ -23,6 +23,7 @@ public class Service {
     private Completable start() {
         Vertx vertx = Vertx.vertx();
         Router router = Router.router(vertx);
+        router.get("/").handler(this::defaultHandler);
         router.get("/heroes").handler(this::getAllHeroes);
         router.get("/villains").handler(this::getAllVillains);
         router.get("/heroes/random").handler(this::getRandomHero);
@@ -47,6 +48,16 @@ public class Service {
                         .requestHandler(router::accept)
                         .rxListen(8080))
                 .toCompletable();
+    }
+
+    private void defaultHandler(RoutingContext routingContext) {
+        routingContext.response().end(
+                new JsonObject()
+                        .put("Response", "Success")
+                        .put("Code", 200)
+                        .put("Message", "Try more useful endpoints, e.g., /heroes or /villans")
+                        .encodePrettily()
+        );
     }
 
     private void getAllHeroes(RoutingContext rc) {
