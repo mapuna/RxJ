@@ -1,4 +1,4 @@
-package org.mapuna.random;
+package org.mapuna.other;
 
 import io.reactivex.Maybe;
 import io.reactivex.Observable;
