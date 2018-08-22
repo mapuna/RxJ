@@ -1,6 +1,5 @@
 package org.mapuna.ch5;
 
-import io.reactivex.Single;
 import io.vertx.reactivex.ext.web.client.HttpResponse;
 import io.vertx.reactivex.ext.web.codec.BodyCodec;
 import org.mapuna.utils.Supers;

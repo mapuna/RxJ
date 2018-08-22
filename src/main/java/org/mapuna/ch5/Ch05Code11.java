@@ -2,7 +2,6 @@ package org.mapuna.ch5;
 
 import io.reactivex.Observable;
 import io.reactivex.Single;
-import io.reactivex.SingleSource;
 import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.ext.web.client.HttpResponse;
 import org.mapuna.utils.Service;
