@@ -39,7 +39,7 @@ public class Supers {
 
     @Override
     public String toString() {
-        return name + "(" + (villain ? "villain" : "hero") + "): " + superpowers;
+        return name + " (" + (villain ? "villain" : "hero") + "): " + superpowers;
     }
 
     public int getId() {
