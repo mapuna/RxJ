@@ -85,6 +85,7 @@ public class Helpers {
     }
 
     private static final AtomicInteger threadCount = new AtomicInteger();
+
     public static final ThreadFactory threadFactory = r -> {
         Thread thread = new Thread(r);
         thread.setName("Scheduler-" + threadCount.getAndIncrement());
